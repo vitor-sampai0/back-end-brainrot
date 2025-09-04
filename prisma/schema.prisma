@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id        Int     @id @default(autoincrement())
+  descricao String
+  concluida Boolean @default(false)
+  criadaEm  DateTime @default(now())
+
+  @@map("tasks")
+}
+
+model Brainrot {
+  id          Int     @id @default(autoincrement())
+  name        String
+  img_1       String?
+  img_2       String?
+  img_3       String?
+  img_4       String?
+  img_5       String?
+  img_6       String?
+  img_7       String?
+  img_8       String?
+  
+  rarity_1      String?
+  rarity_2      String?
+  rarity_3      String?
+  rarity_4      String?
+  rarity_5      String?
+  rarity_6      String?
+  rarity_7      String?
+  rarity_8      String?
+
+  cost        Int
+  income      Int
+  favorite    Boolean @default(false)
+  
+  concluida   Boolean @default(false)
+  criadaEm    DateTime @default(now())
+
+  @@map("brainrots")
+}
