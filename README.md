@@ -39,11 +39,11 @@ Siga os passos abaixo para configurar o projeto em sua máquina:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/Steal-a-Brainrot.git
+   git clone https://github.com/vitor-sampai0/back-end-brainrot.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash
-   code Steal-a-Brainrot
+   code back-end-brainrot
    ```
 3. Configure o ambiente de desenvolvimento, caso utilize frameworks adicionais.  
 4. Execute o servidor local para testar a aplicação:  
