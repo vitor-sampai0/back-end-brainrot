@@ -1,224 +1,79 @@
-{
-      "name" : "",
-    "img_1": "",
-    "img_2": "",
-    "img_3": "",
-    "img_4":"",
-    "img_5":"",
-    "img_6":"",
-    "img_7":"",
-    "img_8":"",
-    "rarity_1":"common",
-    "rarity_2":"gold",
-    "rarity_3":"diamond",
-    "rarity_4":"candy",
-    "rarity_5":"BloodRot",
-    "rarity_6":"Lava",
-    "rarity_7":"Rainbow",
-    "rarity_8":"Galaxy",
-   "cost":,
-    "income":
-}
+# 🧠 Projeto Steal a Brainrot
 
-# Gerenciador de Cursos 🎸
-
-Este projeto é uma API para gerenciar cursos de música. Ele permite criar, listar, atualizar, buscar e excluir cursos, com suporte a validações e persistência de dados.
+## 📖 Descrição
+O **Steal a Brainrot** é uma aplicação interativa e inovadora que permite aos usuários **explorar, gerenciar e se divertir com brainrots** de maneira prática e envolvente.  
+Com um catálogo dinâmico e intuitivo, os usuários podem visualizar detalhes, imagens e raridades de cada brainrot, além de criar uma coleção personalizada de favoritos.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
-
-- **Node.js**: Ambiente de execução JavaScript.
-- **Express**: Framework para criação de APIs.
-- **Prisma**: ORM para manipulação do banco de dados.
-- **SQLite**: Banco de dados utilizado no desenvolvimento.
-- **Thunder Client**: Ferramenta para testar requisições (opcional).
+## 🚀 Funcionalidades Principais
+- 📜 **Catálogo Completo**: Explore todos os brainrots disponíveis em uma interface organizada e amigável.  
+- 🔍 **Detalhes Avançados**: Consulte informações detalhadas, incluindo:  
+  - Nome  
+  - Imagens  
+  - Raridade  
+  - Custo  
+  - Renda  
+- ⭐ **Favoritos Personalizados**: Adicione ou remova brainrots da sua lista de favoritos com apenas um clique.  
+- 🎨 **Classificação por Raridade**: Descubra brainrots organizados em níveis exclusivos:  
+  - `common`  
+  - `gold`  
+  - `diamond`  
+  - `candy`  
+  - `BloodRot`  
+  - `Lava`  
+  - `Rainbow`  
+  - `Galaxy`   
 
 ---
 
-## 📦 Instalação e Execução
+## 🛠️ Tecnologias Utilizadas 
+- **JSON**: Para armazenamento e manipulação eficiente dos dados dos brainrots.  
+- **React/React Native**: Para criar uma interface de usuário moderna e responsiva.  
+- **Node.js**: Para backend e integração com APIs.  
 
-### Pré-requisitos
-- Node.js (v22.14.0 ou superior)
-- Gerenciador de pacotes `npm` ou `yarn`
+---
 
-### Passos para rodar o projeto
+## 📥 Instalação e Configuração
+Siga os passos abaixo para configurar o projeto em sua máquina:
 
-1. **Clone o repositório**:
+1. Clone este repositório:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd Atividade-04
+   git clone https://github.com/seu-usuario/Steal-a-Brainrot.git
    ```
-
-2. **Instale as dependências**:
+2. Navegue até o diretório do projeto:
+   ```bash
+   code Steal-a-Brainrot
+   ```
+3. Configure o ambiente de desenvolvimento, caso utilize frameworks adicionais.  
+4. Execute o servidor local para testar a aplicação:  
    ```bash
    npm install
+   npm run dev
    ```
 
-3. **Configure o banco de dados**:
-   - Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
-     ```
-     DATABASE_URL="file:./dev.db"
-     ```
-   - Execute as migrações para criar as tabelas no banco:
-     ```bash
-     npx prisma migrate dev --name init
-     ```
+---
 
-4. **Inicie o servidor**:
+## 🧩 Como Contribuir
+Contribuições são essenciais para o crescimento do projeto! Veja como você pode colaborar:  
+
+1. Faça um fork do repositório clicando no botão "Fork" no GitHub.  
+2. Crie uma nova branch para suas alterações:  
    ```bash
-   npm start
+   git checkout -b minha-branch
    ```
+3. Realize as alterações desejadas e faça commits claros e descritivos:  
+   ```bash
+   git commit -m "Descrição das alterações"
+   ```
+4. Envie suas alterações para o repositório remoto:  
+   ```bash
+   git push origin minha-branch
+   ```
+5. Abra um pull request no repositório original e descreva suas melhorias.  
 
-5. **Acesse a API**:
-   O servidor estará disponível em `http://localhost:3000`.
-
----
-
-## 📖 Endpoints da API
-
-### 1. **Listar todos os cursos**
-- **Rota**: `GET /courses`
-- **Exemplo de resposta**:
-  ```json
-  [
-    {
-      "id": 1,
-      "title": "Curso de Violão",
-      "instrument": "Violão",
-      "level": "Iniciante",
-      "duration": 12,
-      "price": 499.99,
-      "instructor": "João Silva",
-      "maxStudents": 20,
-      "concluida": false,
-      "criadaEm": "2025-04-10T12:00:00.000Z"
-    }
-  ]
-  ```
 
 ---
 
-### 2. **Criar um novo curso**
-- **Rota**: `POST /courses`
-- **Body (JSON)**:
-  ```json
-  {
-    "title": "Curso de Violão",
-    "instrument": "Violão",
-    "level": "Iniciante",
-    "duration": 12,
-    "price": 499.99,
-    "instructor": "João Silva",
-    "maxStudents": 20
-  }
-  ```
-- **Exemplo de resposta**:
-  ```json
-  {
-    "id": 1,
-    "title": "Curso de Violão",
-    "instrument": "Violão",
-    "level": "Iniciante",
-    "duration": 12,
-    "price": 499.99,
-    "instructor": "João Silva",
-    "maxStudents": 20,
-    "concluida": false,
-    "criadaEm": "2025-04-10T12:00:00.000Z"
-  }
-  ```
 
----
-
-### 3. **Buscar um curso por ID**
-- **Rota**: `GET /courses/:id`
-- **Exemplo de resposta**:
-  ```json
-  {
-    "id": 1,
-    "title": "Curso de Violão",
-    "instrument": "Violão",
-    "level": "Iniciante",
-    "duration": 12,
-    "price": 499.99,
-    "instructor": "João Silva",
-    "maxStudents": 20,
-    "concluida": false,
-    "criadaEm": "2025-04-10T12:00:00.000Z"
-  }
-  ```
-
----
-
-### 4. **Atualizar um curso**
-- **Rota**: `PUT /courses/:id`
-- **Body (JSON)**:
-  ```json
-  {
-    "title": "Curso de Guitarra",
-    "instrument": "Guitarra",
-    "level": "Avançado",
-    "duration": 16,
-    "price": 699.99,
-    "instructor": "Maria Souza",
-    "maxStudents": 15,
-    "concluida": true
-  }
-  ```
-- **Exemplo de resposta**:
-  ```json
-  {
-    "id": 1,
-    "title": "Curso de Guitarra",
-    "instrument": "Guitarra",
-    "level": "Avançado",
-    "duration": 16,
-    "price": 699.99,
-    "instructor": "Maria Souza",
-    "maxStudents": 15,
-    "concluida": true,
-    "criadaEm": "2025-04-10T12:00:00.000Z"
-  }
-  ```
-
----
-
-### 5. **Excluir um curso**
-- **Rota**: `DELETE /courses/:id`
-- **Exemplo de resposta**:
-  ```json
-  {
-    "message": "Curso deletado com sucesso!"
-  }
-  ```
-
----
-
-## 🛠 Decisões de Design e Arquitetura
-
-1. **Estrutura MVC**:
-   - **Controllers**: Contêm a lógica de negócios e manipulam as requisições/respostas.
-   - **Models**: Responsáveis pela interação com o banco de dados usando o Prisma.
-   - **Routes**: Definem as rotas da API e conectam os endpoints aos controllers.
-
-2. **Banco de Dados**:
-   - Utilizamos o SQLite para simplicidade no desenvolvimento. O Prisma facilita a migração para outros bancos, como PostgreSQL ou MySQL, se necessário.
-
-3. **Validação de Dados**:
-   - Validações básicas são realizadas nos controllers para garantir que os campos obrigatórios sejam fornecidos.
-
-4. **ORM Prisma**:
-   - Escolhido pela facilidade de uso, suporte a migrações e integração com TypeScript.
-
----
-
-## 🧪 Testando a API
-
-Recomenda-se o uso do **Thunder Client**  para testar os endpoints. Certifique-se de que o servidor está em execução antes de enviar as requisições.
-
----
-
-## 📄 Licença
-
-Este projeto é de uso livre para fins educacionais.
+**Divirta-se explorando o mundo dos brainrots!** 🌟
