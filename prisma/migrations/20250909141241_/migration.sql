@@ -1,13 +1,10 @@
-/*
-  Warnings:
-
-  - You are about to drop the `courses` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-PRAGMA foreign_keys=off;
-DROP TABLE "courses";
-PRAGMA foreign_keys=on;
+-- CreateTable
+CREATE TABLE "tasks" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "descricao" TEXT NOT NULL,
+    "concluida" BOOLEAN NOT NULL DEFAULT false,
+    "criadaEm" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
 -- CreateTable
 CREATE TABLE "brainrots" (
@@ -31,6 +28,7 @@ CREATE TABLE "brainrots" (
     "rarity_8" TEXT,
     "cost" INTEGER NOT NULL,
     "income" INTEGER NOT NULL,
+    "favorite" BOOLEAN NOT NULL DEFAULT false,
     "concluida" BOOLEAN NOT NULL DEFAULT false,
     "criadaEm" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
