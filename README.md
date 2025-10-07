@@ -65,12 +65,7 @@ O **Back-end Brainrot** é uma API REST robusta e escalável que fornece todos o
    PORT = 4000
    ```
 
-4. Execute as migrações do Prisma:
-   ```bash
-   npx prisma migrate dev
-   ```
-
-5. Inicie o servidor:
+4. Inicie o servidor:
    ```bash
    # Desenvolvimento
    npm run dev
