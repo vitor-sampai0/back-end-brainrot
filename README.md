@@ -58,14 +58,22 @@ O **Back-end Brainrot** é uma API REST robusta e escalável que fornece todos o
    npm install
    ```
 
+3. Crie o arquivo `.env` na raiz do projeto:
+   ```properties
+   DATABASE_URL="file:./brainrot.db"
+   
+   PORT = 4000
+   ```
 
+4. Execute as migrações do Prisma:
+   ```bash
+   npx prisma migrate dev
+   ```
 
-
-3. Inicie o servidor:
+5. Inicie o servidor:
    ```bash
    # Desenvolvimento
    npm run dev
-
    ```
 
 ---
