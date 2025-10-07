@@ -1,79 +1,132 @@
-# 🧠 Projeto Steal a Brainrot
+# 🧠 Back-end Brainrot API
 
 ## 📖 Descrição
-O **Steal a Brainrot** é uma aplicação interativa e inovadora que permite aos usuários **explorar, gerenciar e se divertir com brainrots** de maneira prática e envolvente.  
-Com um catálogo dinâmico e intuitivo, os usuários podem visualizar detalhes, imagens e raridades de cada brainrot, além de criar uma coleção personalizada de favoritos.
+O **Back-end Brainrot** é uma API REST robusta e escalável que fornece todos os dados e funcionalidades necessárias para aplicações que gerenciam brainrots. Esta API oferece endpoints seguros e eficientes para consulta, manipulação e organização de dados de brainrots, incluindo sistema de favoritos
 
 ---
 
-## 🚀 Funcionalidades Principais
-- 📜 **Catálogo Completo**: Explore todos os brainrots disponíveis em uma interface organizada e amigável.  
-- 🔍 **Detalhes Avançados**: Consulte informações detalhadas, incluindo:  
-  - Nome  
-  - Imagens  
-  - Raridade  
-  - Custo  
-  - Renda  
-- ⭐ **Favoritos Personalizados**: Adicione ou remova brainrots da sua lista de favoritos com apenas um clique.  
-- 🎨 **Classificação por Raridade**: Descubra brainrots organizados em níveis exclusivos:  
-  - `common`  
-  - `gold`  
-  - `diamond`  
-  - `candy`  
-  - `BloodRot`  
-  - `Lava`  
-  - `Rainbow`  
-  - `Galaxy`   
+## 🚀 Funcionalidades da API
+
+### 📊 Endpoints Principais
+- **GET /api/brainrots** - Lista todos os brainrots disponíveis
+- **GET /api/brainrots/:id** - Detalhes específicos de um brainrot
+
+
+
+### 🎨 Classificação por Raridade
+- `common` - Brainrots básicos
+- `gold` - Raridade dourada
+- `diamond` - Extremamente raros
+- `candy` - Edição especial doce
+- `BloodRot` - Raridade sombria
+- `Lava` - Edição vulcânica
+- `Rainbow` - Multicoloridos únicos
+- `Galaxy` - Raridade cósmica suprema
 
 ---
 
-## 🛠️ Tecnologias Utilizadas 
-- **JSON**: Para armazenamento e manipulação eficiente dos dados dos brainrots.  
-- **React/React Native**: Para criar uma interface de usuário moderna e responsiva.  
-- **Node.js**: Para backend e integração com APIs.  
+## 🛠️ Stack Tecnológica
+
+### Core
+- **Node.js** - Runtime JavaScript para servidor
+- **Express.js** - Framework web minimalista e flexível
+
+
+
+
+### Desenvolvimento
+- **nodemon** - Auto-reload durante desenvolvimento
+- **dotenv** - Gerenciamento de variáveis de ambiente
+- **joi** - Validação de esquemas de dados
 
 ---
 
 ## 📥 Instalação e Configuração
-Siga os passos abaixo para configurar o projeto em sua máquina:
 
-1. Clone este repositório:
+### Pré-requisitos
+- Node.js (v16 ou superior)
+- npm
+
+### Setup do Projeto
+1. Clone o repositório:
    ```bash
    git clone https://github.com/vitor-sampai0/back-end-brainrot.git
    ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   code back-end-brainrot
-   ```
-3. Configure o ambiente de desenvolvimento, caso utilize frameworks adicionais.  
-4. Execute o servidor local para testar a aplicação:  
+
+2. Instale as dependências:
    ```bash
    npm install
+   ```
+
+
+
+
+3. Inicie o servidor:
+   ```bash
+   # Desenvolvimento
    npm run dev
+
    ```
 
 ---
+
+## 📡 Documentação da API
+
+### Estrutura de Resposta Padrão
+```json
+{
+  "success": true,
+  "data": {},
+  "message": "Operação realizada com sucesso",
+  "timestamp": "2024-01-01T00:00:00.000Z"
+}
+```
+
+### Exemplo de Brainrot
+```json
+{
+  "id": "507f1f77bcf86cd799439011",
+  "name": "Sigma Chad",
+  "image": "https://example.com/sigma-chad.jpg",
+  "rarity": "diamond",
+  "cost": 1500,
+  "income": 250,
+  "description": "O mais alpha dos brainrots",
+  "createdAt": "2024-01-01T00:00:00.000Z"
+}
+```
+
+---
+
+
+## 🚀 Deploy
+
+
 
 ## 🧩 Como Contribuir
-Contribuições são essenciais para o crescimento do projeto! Veja como você pode colaborar:  
 
-1. Faça um fork do repositório clicando no botão "Fork" no GitHub.  
-2. Crie uma nova branch para suas alterações:  
+1. **Fork** o repositório
+2. **Crie** uma branch para sua feature:
    ```bash
-   git checkout -b minha-branch
+   git checkout -b feature/nova-funcionalidade
    ```
-3. Realize as alterações desejadas e faça commits claros e descritivos:  
+3. **Commit** suas alterações:
    ```bash
-   git commit -m "Descrição das alterações"
+   git commit -m "feat: adiciona nova funcionalidade"
    ```
-4. Envie suas alterações para o repositório remoto:  
+4. **Push** para a branch:
    ```bash
-   git push origin minha-branch
+   git push origin feature/nova-funcionalidade
    ```
-5. Abra um pull request no repositório original e descreva suas melhorias.  
+5. **Abra** um Pull Request
 
+### Padrões de Commit
+- `feat:` nova funcionalidade
+- `fix:` correção de bug
+- `docs:` atualização de documentação
+- `refactor:` refatoração de código
+- `test:` adição ou correção de testes
 
 ---
 
-
-**Divirta-se explorando o mundo dos brainrots!** 🌟
+**Construa APIs poderosas para o universo dos brainrots!** 🌟⚡
